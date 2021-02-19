@@ -3,17 +3,17 @@
     <% @diaries.each do |diary| %>
       <div class="card">
         <div class="gallery" style="background-image: url(<%= diary.  breakfast_image %>);"></div>
-        <div class="card-left">
+        <div class="card-right">
           <div class="top-wapper">
             <div class="index-day"><%= diary.day %>日目</div>
             <div class="index-weight">体重<%= diary.weight %>kg</div>
           </div>
-          <div class="low-wapper">
-            <div class="low-wapper-left">
+          <div class="middle-wapper">
+            <div class="middle-wapper-left">
               <div class="exercise">運動</div>
               <div class="comment">コメント</div>
             </div>
-            <div class="low-wapper-right">
+            <div class="middle-wapper-right">
               <div class="exercise-text">
                 <span><%= diary.exercise %></span>
               </div>
@@ -22,11 +22,17 @@
               </div>
             </div>
           </div>
+          <div class="low-wapper">
+            <div class="low-wapper-right">
+              
+              <%= link_to '削除', "/diaries/#{diary.id}", method: :delete %>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
   </div>
-  
+
   <div class="big-right">
     level
   </div>

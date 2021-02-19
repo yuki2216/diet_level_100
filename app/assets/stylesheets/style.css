@@ -1005,6 +1005,29 @@ form input[type="submit"]:hover {
   background-color: #84d3ef;
 }
 
+
+
+.new_text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.new_day_weight {
+  width: 200px;
+  display: flex;
+}
+
+.new_day_weight h1 {
+  font-size: 20px;
+  width: 100px;
+  padding: 10px 5px;
+}
+
+.alert {
+  font-size: 14px;
+}
+
+
 .container {
   margin: 20px 0;
   padding: 30px;
@@ -1094,12 +1117,12 @@ footer p {
   width: 250px;
 }
 
-.low-wapper {
+.middle-wapper {
   height: 200px;
   display: flex;
 }
 
-.low-wapper-left {
+.middle-wapper-left {
   width: 70px;
   height: 200px;
 }
@@ -1114,7 +1137,7 @@ footer p {
   height: 60%;
 }
 
-.low-wapper-right {
+.middle-wapper-right {
   width: 750px;
 }
 
@@ -1130,7 +1153,21 @@ footer p {
   height: 60%;
 }
 
+.low-wapper {
+  height: 55px;
+  display: flex;
+}
+
+.low-wapper-right {
+  display: flex;
+}
 
 .big-right {
   width: 150px;
 }
+
+.reveres {
+  display: flex;
+  flex-direction: column-reverse;
+}
+

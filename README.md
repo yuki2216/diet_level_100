@@ -19,7 +19,7 @@
 
 | Column          | Type       | Options           |
 | --------------- | ---------- | ----------------- |
-| day             | date       | null: false       |
+| day             | string     | null: false       |
 | breakfast_image | text       |                   |
 | lunch_image     | text       |                   |
 | dinner_image    | text       |                   |
