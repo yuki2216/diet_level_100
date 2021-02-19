@@ -12,9 +12,18 @@ class DiariesController < ApplicationController
   end
 
   def destroy
-    
+    diary = Diary.find(params[:id])
+    diary.destroy
   end
 
+  def edit
+    @diary = Diary.find(params[:id])
+  end
+
+  def update
+    diary = Diary.find(params[:id])
+    diary.update(diary_params)
+  end
   private
 
   def diary_params

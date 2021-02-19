@@ -1,0 +1,26 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%= form_with(model: @diary, local: true) do |form| %>
+      <span class="new_text">
+        <div class="new_day_weight">
+          <div class="alert">必須</div>
+          <%= form.text_field :day, placeholder: "" %>
+          <h1>日目</h1>
+        </div>
+        <div class="new_day_weight">
+          <div class="alert">必須</div>
+          <%= form.text_field :weight, placeholder: "体重" %>
+          <h1>kg</h1>
+        </div>
+      </span>
+      <%= form.text_field :breakfast_image, placeholder: "朝食写真url" %>
+      <%= form.text_field :lunch_image, placeholder: "昼食写真url" %>
+      <%= form.text_field :dinner_image, placeholder: "夕食写真url" %>
+      <%= form.text_field :snack_image, placeholder: "間食url" %>
+      <%= form.text_area :exercise, placeholder: "運動記録", rows: "3" %>
+      <%= form.text_area :comment, placeholder: "コメント", rows: "4" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

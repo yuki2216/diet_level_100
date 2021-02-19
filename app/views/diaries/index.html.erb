@@ -26,6 +26,7 @@
             <div class="low-wapper-right">
               
               <%= link_to '削除', "/diaries/#{diary.id}", method: :delete %>
+              <%= link_to '編集', edit_diary_path(diary.id), method: :get %>
             </div>
           </div>
         </div>
