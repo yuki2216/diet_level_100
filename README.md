@@ -13,13 +13,13 @@
 ### Association
 
 - has_many :diaries
-- has_many :comments
+- has_many :messages
 
 ## diaries テーブル
 
 | Column          | Type       | Options           |
 | --------------- | ---------- | ----------------- |
-| day             | date       | null: false       |
+| day             | string     | null: false       |
 | breakfast_image | text       |                   |
 | lunch_image     | text       |                   |
 | dinner_image    | text       |                   |
@@ -31,17 +31,15 @@
 ### Association
 
 - belongs_to :users
-- has_many :comments
 
-## comments テーブル
+## messages テーブル
 
 | Column             | Type       | Options           |
 | ------------------ | ---------- | ----------------- |
 | text               | text       | null: false       |
 | user               | references | foreign_key: true |
-| diary              | references | foreign_key: true |
+
 
 ### Association
 
 - belongs_to :user
-- belongs_to :diary
