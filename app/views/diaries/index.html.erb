@@ -27,6 +27,9 @@
               <%= link_to '詳細', diary_path(diary.id), method: :get %>
               <%= link_to '編集', edit_diary_path(diary.id), method: :get %>
               <%= link_to '削除', "/diaries/#{diary.id}", method: :delete %>
+              <a href="/users/<%= diary.user.id %>">
+                <span>投稿者</span><%= diary.user.nickname %>
+              </a>
             </div>
           </div>
         </div>
