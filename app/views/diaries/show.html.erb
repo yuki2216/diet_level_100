@@ -1,12 +1,11 @@
 <div class="contents">
   <div class="big-left">
-    <% @diaries.each do |diary| %>
       <div class="card">
-        <div class="gallery" style="background-image: url(<%= diary.breakfast_image %>);"></div>
+        <div class="gallery" style="background-image: url(<%= @diary.breakfast_image %>);"></div>
         <div class="card-right">
           <div class="top-wapper">
-            <div class="index-day"><%= diary.day %>日目</div>
-            <div class="index-weight">体重<%= diary.weight %>kg</div>
+            <div class="index-day"><%= @diary.day %>日目</div>
+            <div class="index-weight">体重<%= @diary.weight %>kg</div>
           </div>
           <div class="middle-wapper">
             <div class="middle-wapper-left">
@@ -15,23 +14,21 @@
             </div>
             <div class="middle-wapper-right">
               <div class="exercise-text">
-                <span><%= diary.exercise %></span>
+                <span><%= @diary.exercise %></span>
               </div>
               <div class="comment-text">
-                <span><%= diary.comment %></span>
+                <span><%= @diary.comment %></span>
               </div>
             </div>
           </div>
           <div class="low-wapper">
             <div class="low-wapper-right">
-              <%= link_to '詳細', diary_path(diary.id), method: :get %>
-              <%= link_to '編集', edit_diary_path(diary.id), method: :get %>
-              <%= link_to '削除', "/diaries/#{diary.id}", method: :delete %>
+              <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
+              <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
             </div>
           </div>
         </div>
       </div>
-    <% end %>
   </div>
 
   <div class="big-right">
