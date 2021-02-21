@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @diaries = Diary.includes(:user).order("created_at DESC")
@@ -32,6 +32,9 @@ class DiariesController < ApplicationController
     @comments = @diary.comments.includes(:user)
   end
 
+  def search
+    @diaries = Diary.search(params[:keyword])
+  end
   private
 
   def diary_params
