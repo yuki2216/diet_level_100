@@ -9,7 +9,7 @@ class DiariesController < ApplicationController
   def new
     @diary = Diary.new
   end
-
+ 
   def create
     Diary.create(diary_params)
   end
