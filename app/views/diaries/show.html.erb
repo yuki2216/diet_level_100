@@ -23,8 +23,10 @@
           </div>
           <div class="low-wapper">
             <div class="low-wapper-right">
-              <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
-              <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
+              <% if user_signed_in? && current_user.id == @diary.user_id %>
+                <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
+                <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
+              <% end %>
               <a href="/users/<%= diary.user.id %>">
                 <span>投稿者</span><%= diary.user.nickname %>
               </a>
