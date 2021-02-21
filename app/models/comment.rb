@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
   belongs_to :diary
-  belongs_to :user
+  bwlongs_to :user
 end
