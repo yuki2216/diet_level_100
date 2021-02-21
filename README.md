@@ -13,7 +13,7 @@
 ### Association
 
 - has_many :diaries
-- has_many :messages
+- has_many :comments
 
 ## diaries テーブル
 
@@ -28,18 +28,21 @@
 | exercise        | text       |                   |
 | comment         | text       |                   |
 | user            | references | foreign_key: true |
+
 ### Association
 
 - belongs_to :users
+- has_many :comments
 
-## messages テーブル
+## comments テーブル
 
 | Column             | Type       | Options           |
 | ------------------ | ---------- | ----------------- |
 | text               | text       | null: false       |
+| diary              | references | foreign_key: true |
 | user               | references | foreign_key: true |
-
 
 ### Association
 
+- belongs_to :diary
 - belongs_to :user
