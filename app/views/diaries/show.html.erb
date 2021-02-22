@@ -1,42 +1,25 @@
-<div class="contents">
-  <div class="big-left">
-      <div class="card">
-        <div class="gallery" style="background-image: url(<%= @diary.breakfast_image %>);"></div>
-        <div class="card-right">
-          <div class="top-wapper">
-            <div class="index-day"><%= @diary.day %>日目</div>
-            <div class="index-weight">体重<%= @diary.weight %>kg</div>
-          </div>
-          <div class="middle-wapper">
-            <div class="middle-wapper-left">
-              <div class="exercise">運動</div>
-              <div class="comment">コメント</div>
-            </div>
-            <div class="middle-wapper-right">
-              <div class="exercise-text">
-                <span><%= @diary.exercise %></span>
-              </div>
-              <div class="comment-text">
-                <span><%= @diary.comment %></span>
-              </div>
-            </div>
-          </div>
-          <div class="low-wapper">
-            <div class="low-wapper-right">
-              <% if user_signed_in? && current_user.id == @diary.user_id %>
-                <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
-                <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
-              <% end %>
-              <a href="/users/<%= @diary.user.id %>">
-                <span>投稿者</span><%= @diary.user.nickname %>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+<%= @diary.day %>日目
 
-  <div class="big-right">
-    level
-  </div>
-</div>
+体重<%= @diary.weight %>kg
+
+<%= image_tag @diary.image.variant(resize: '330x330'), class: 'message-image' if @diary.image.attached? %>
+
+
+<%= @diary.exercise %>
+
+
+<%= @diary.comment %>
+
+<% if user_signed_in? && current_user.id == @diary.user_id %>
+  <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
+  <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
+<% end %>
+
+<a href="/users/<%= @diary.user.id %>">
+  <span>投稿者</span><%= @diary.user.nickname %>
+</a>
+
+
+
+
+
