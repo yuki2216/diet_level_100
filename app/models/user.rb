@@ -3,4 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :diaries
   has_many :comments
+
+  validates :nickname, presence: true
 end
