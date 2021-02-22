@@ -1,5 +1,8 @@
 <div class="card">
   <div class="gallery" style="background-image: url(<%= diary.breakfast_image %>);"></div>
+
+  <%= image_tag diary.image.variant(resize: '330x330'), class: 'message-image' if diary.image.attached? %>
+
   <div class="card-right">
     <div class="top-wapper">
       <div class="index-day"><%= diary.day %>日目</div>
