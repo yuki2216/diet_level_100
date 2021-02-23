@@ -1,25 +1,47 @@
-<%= @diary.day %>日目
+<div>
+  <%= @diary.day %>日目
+  
+  体重<%= @diary.weight %>kg
+  
+  <%= image_tag @diary.image.variant(resize: '330x330'), class:   'message-image' if @diary.image.attached? %>
+  
+  
+  <%= @diary.exercise %>
+  
+  
+  <%= @diary.comment %>
+  
+  <% if user_signed_in? && current_user.id == @diary.user_id %>
+    <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
+    <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
+  <% end %>
+  
+  <a href="/users/<%= @diary.user.id %>">
+    <span>投稿者</span><%= @diary.user.nickname %>
+  </a>
+</div>
 
-体重<%= @diary.weight %>kg
+<div>
+  <% chart_datas = [] %>
+  <% chart_data1 = [] %>
+  <% chart_data2 = [] %>
+  <% chart_data3 = [] %>
+  <% chart_data4 = [] %>
+  <% chart_datas << chart_data1 %>
+  <% chart_datas << chart_data2 %>
+  <% chart_datas << chart_data3 %>
+  <% chart_datas << chart_data4 %>
+  <% chart_data1 << "糖質(g)" %>
+  <% chart_data1 << @diary.sugar.to_f %>
+  <% chart_data2 << "タンパク質(g)" %>
+  <% chart_data2 << @diary.protein.to_f %>
+  <% chart_data3 << "カロリー(g)" %>
+  <% chart_data3 << @diary.calorie.to_f %>
+  <% chart_data4 << "脂質(g)" %>
+  <% chart_data4 << @diary.lipid.to_f %>
 
-<%= image_tag @diary.image.variant(resize: '330x330'), class: 'message-image' if @diary.image.attached? %>
-
-
-<%= @diary.exercise %>
-
-
-<%= @diary.comment %>
-
-<% if user_signed_in? && current_user.id == @diary.user_id %>
-  <%= link_to '編集', edit_diary_path(@diary.id), method: :get %>
-  <%= link_to '削除', "/diaries/#{@diary.id}", method: :delete %>
-<% end %>
-
-<a href="/users/<%= @diary.user.id %>">
-  <span>投稿者</span><%= @diary.user.nickname %>
-</a>
-
-
+  <%= bar_chart chart_datas, width: "1100px", height: "400px", colors: ["#b00", "#666"] %>
+</div>
 
   <div class="container">
     <% if user_signed_in? %>

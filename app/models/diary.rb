@@ -6,8 +6,16 @@ class Diary < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
-    validates :day , format: { with: /\A[0-9]+\z/, message: "半角数字で入力してください" }
-    validates :weight, format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" }
+    validates :day
+    validates :weight
+  end
+
+  with_options format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" } do
+    validates :weight
+    validates :sugar
+    validates :protein
+    validates :calorie
+    validates :lipid
   end
 
   def self.search(search)

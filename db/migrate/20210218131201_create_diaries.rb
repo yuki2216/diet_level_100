@@ -3,8 +3,10 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
     create_table :diaries do |t|
       t.string :day,      null: false, default: ""
       t.string :weight,   null: false, default: ""
-
-
+      t.string :sugar
+      t.string :protein
+      t.string :calorie
+      t.string :lipid
       t.text :exercise
       t.text :comment
       t.timestamps
