@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @initial_weight = user.initial_weight
     @target_weight = user.target_weight
     @diaries = user.diaries.order("created_at DESC")
+    @diaries_reverse = user.diaries
   end
 end
  
