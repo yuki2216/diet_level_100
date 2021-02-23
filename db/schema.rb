@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_02_22_161922) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "nickname"
-    t.string "target_weight"
-    t.string "initial_weight"
+    t.float "target_weight"
+    t.float "initial_weight"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
