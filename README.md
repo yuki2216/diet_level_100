@@ -2,13 +2,13 @@
 
 ## users テーブル
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| nickname           | string  | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-| current_weight     | integer | null: false               |
-| target_weight      | integer | null: false               |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| initial_weight     | string | null: false               |
+| target_weight      | string | null: false               |
 
 ### Association
 

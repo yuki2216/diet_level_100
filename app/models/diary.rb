@@ -7,7 +7,7 @@ class Diary < ApplicationRecord
 
   with_options presence: true do
     validates :day , format: { with: /\A[0-9]+\z/, message: "半角数字で入力してください" }
-    validates :weight, format: { with: /\A[-]?[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" }
+    validates :weight, format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" }
   end
 
   def self.search(search)
