@@ -416,7 +416,16 @@
     100
   <% end %>
 
-
+<% chart_data = [] %>
+<% @diaries_reverse.each do |diary_reverse| %>
+  <% chart_datas = [] %>
+  <% chart_datas << diary_reverse.day %>
+  <% chart_datas << diary_reverse.weight %>
+  <% chart_data << chart_datas %>
+<% end %>
+体重(kg)
+<%= line_chart chart_data, width: "1100px", height: "400px" %>
+(日目)
 
 </div>
 <div class=""> 
