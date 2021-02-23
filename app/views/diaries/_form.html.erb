@@ -15,7 +15,31 @@
     <span class="image-file">画像</span>
     <%= form.file_field :image, class: 'hidden' %>
   </label>
-  
+
+  <span class="new_text">
+    <div class="new_day_weight">糖質(半角)</div>
+    <div class="new_day_weight">タンパク(半角)</div>
+    <div class="new_day_weight">カロリー(半角)</div>
+    <div class="new_day_weight">脂質(半角)</div>
+  </span>
+  <span class="new_text">
+    <div class="new_day_weight">
+      <%= form.text_field :sugar, placeholder: "" %>
+      <h1>g</h1>
+    </div>
+    <div class="new_day_weight">
+      <%= form.text_field :protein, placeholder: "" %>
+      <h1>g</h1>
+    </div>
+    <div class="new_day_weight">
+      <%= form.text_field :calorie, placeholder: "" %>
+      <h1>g</h1>
+    </div>
+    <div class="new_day_weight">
+      <%= form.text_field :lipid, placeholder: "" %>
+      <h1>g</h1>
+    </div>
+  </span>
   <%= form.text_area :exercise, placeholder: "運動記録", rows: "3" %>
   <%= form.text_area :comment, placeholder: "コメント", rows: "4" %>
   <%= form.submit "登録" %>
