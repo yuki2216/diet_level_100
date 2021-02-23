@@ -1,12 +1,25 @@
-<div class="contents">
-  <div class="big-left">
-    <p><%= @nickname %>さんの投稿一覧</p>
-    <% @diaries.each do |diary| %>
-      <%= render partial: "diaries/diary", locals: { diary: diary } %>
-    <% end %>
-  </div>
+<div>
+    レベル
+    初期体重
+  <%= @initial_weight %>
 
-  <div class="big-right">
-    level
-  </div>
+    現在の体重
+  <% @diaries.each do |diary| %>
+    <%= diary.weight %>
+    <% if diary.weight == "60" %>
+      41444
+    <% end %>
+  <% end %>
+
+    目標体重
+  <%= @target_weight %>
+
+
+
+</div>
+<div class=""> 
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @diaries.each do |diary| %>
+    <%= render partial: "diaries/diary", locals: { diary: diary } %>
+  <% end %>
 </div>

@@ -35,8 +35,8 @@ class DiariesController < ApplicationController
   def search
     @diaries = Diary.search(params[:keyword])
   end
+  
   private
-
   def diary_params
     params.require(:diary).permit(:day, :image, :weight, :exercise, :comment).merge(user_id: current_user.id)
   end

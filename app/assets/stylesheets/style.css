@@ -1083,14 +1083,9 @@ footer p {
 
 
 
-.contents {
-  display: flex;
-  justify-content: space-between;
-}
 
-.big-left {
-  
-}
+
+
 
 .card {
   display: flex;
@@ -1170,4 +1165,3 @@ footer p {
   display: flex;
   flex-direction: column-reverse;
 }
-
