@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :comments
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: '半角英数字を使用してください'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角英数字のみ'
 
   with_options presence: true do
     validates :nickname
@@ -13,7 +13,7 @@ class User < ApplicationRecord
     validates :target_weight
   end
 
-  with_options format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" } do
+  with_options format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "は半角数字のみ" } do
     validates :initial_weight
     validates :target_weight
   end
