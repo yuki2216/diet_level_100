@@ -4,9 +4,10 @@ class User < ApplicationRecord
   has_many :diaries
   has_many :comments
 
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX, message: '半角英数字を使用してください'
+
   with_options presence: true do
-    validates :nickname
-    validates :nickname
     validates :nickname
     validates :initial_weight
     validates :target_weight

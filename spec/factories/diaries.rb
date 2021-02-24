@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :diary do
-    day {"1"}
+    day {Faker::Date.in_date_period}
     weight {"60.00"}
-    breakfast_image {Faker::Lorem.sentence}
-    lunch_image {Faker::Lorem.sentence}
-    dinner_image {Faker::Lorem.sentence}
-    snack_image {Faker::Lorem.sentence}
+    sugar {"100.0"}
+    protein {"300.0"}
+    calorie {"300.0"}
+    lipid {"30.0"}
     exercise {Faker::Lorem.sentence}
     comment {Faker::Lorem.sentence}
     association :user 

@@ -7,13 +7,8 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context '新規登録できるとき' do
-      it 'nicknameとemail、passwordとpassword_confirmationが存在すれば登録できる' do
+      it '全ての情報が正しければ登録できる' do
       expect(@user).to be_valid
-      end
-      it 'passwordとpassword_confirmationが6文字以上であれば登録できる' do
-        @user.password = '000000'
-        @user.password_confirmation = '000000'
-        expect(@user).to be_valid
       end
     end
     context '新規登録できないとき' do
@@ -49,6 +44,16 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = '00000'
         @user.valid?
         expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
+      end
+      it '初期体重が空では登録できない' do
+        @user.initial_weight = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Initial weight can't be blank", "Initial weight 半角数字で入力してください")
+      end
+      it '目標体重が空では登録できない' do
+        @user.target_weight = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Target weight can't be blank", "Target weight 半角数字で入力してください")
       end
     end
   end
