@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_161922) do
   end
 
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "day", default: "", null: false
+    t.date "day", null: false
     t.string "weight", default: "", null: false
     t.string "sugar"
     t.string "protein"

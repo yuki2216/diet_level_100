@@ -9,9 +9,15 @@ class DiariesController < ApplicationController
   def new
     @diary = Diary.new
   end
- 
+
   def create
-    Diary.create(diary_params)
+    @diary = Diary.create(diary_params)
+    if @diary.valid?
+      @diary.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def destroy
