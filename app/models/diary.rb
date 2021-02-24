@@ -12,7 +12,7 @@ class Diary < ApplicationRecord
     validates :lipid
   end
 
-  with_options format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "半角数字で入力してください" } do
+  with_options format: { with: /\A[0-9]+(\.[0-9]+)?\z/, message: "は半角数字" } do
     validates :weight
     validates :sugar
     validates :protein
