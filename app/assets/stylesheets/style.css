@@ -1108,84 +1108,57 @@ footer p {
 
 
 
-
-
-
-.card {
-  display: flex;
+.oya {
+  display: grid;
+  grid-template-rows: 75px 80px 105px 40px;
+  grid-template-columns: 300px 80px 95px 175px 175px 175px;
+  grid-template-areas: 
+  "a b b b c c"
+  "a d e e e e"
+  "a f g g g g"
+  "a h h i j k";
 }
 
-.gallery {
-  width: 510px;
-  height: 330px;
+.grid-gallery {
+ grid-area: a;
 }
 
-.top-wapper {
-  width: 500px;
-  height: 75px;
-  display: flex;
+.grid-day {
+  grid-area: b;
 }
 
-.index-day {
-  font-size: 60px;
-  width: 250px;
+.grid-weight {
+  grid-area: c;
 }
 
-.index-weight {
-  font-size: 45px;
-  width: 250px;
+.grid-exercise {
+  grid-area: d;
 }
 
-.middle-wapper {
-  height: 200px;
-  display: flex;
+.grid-exercise-text {
+  grid-area: e;
 }
 
-.middle-wapper-left {
-  width: 70px;
-  height: 200px;
+.grid-comment {
+  grid-area: f;
 }
 
-.exercise {
-  width: 80px;
-  height: 40%;
+.grid-comment-text {
+  grid-area: g;
 }
 
-.comment {
-  width: 80px;
-  height: 60%;
+.grid-h {
+  grid-area: h;
 }
 
-.middle-wapper-right {
-  width: 750px;
+.grid-i {
+  grid-area: i;
 }
 
-.exercise-text {
-  font-size: 19px;
-  height: 40%;
-
-  margin: 2px, 0px;
+.grid-j {
+  grid-area: j;
 }
 
-.comment-text {
-  font-size: 19px;
-  height: 60%;
-}
-
-.low-wapper {
-  height: 55px;
-  display: flex;
-}
-
-.low-wapper-right {
-  display: flex;
-}
-
-.big-right {
-  width: 150px;
-}
-
-.reveres {
-  display: flex;
-  flex-direction: column-reverse;
+.grid-k {
+  grid-area: k;
 }
