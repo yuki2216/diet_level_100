@@ -1120,7 +1120,7 @@ footer p {
 }
 
 .grid-gallery {
- grid-area: a;
+ grid-area: a;e
 }
 
 .grid-day {
@@ -1161,4 +1161,23 @@ footer p {
 
 .grid-k {
   grid-area: k;
+}
+
+
+.switch {
+  margin: 1px;
+  padding: 7px 55px;
+  font-size: 16px;
+  color: #00FFFF;
+  background-color: #0000BB;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100vh;
+}
+
+.switch:hover:hover {
+  color: #00FFFF;
+  background-color: #0000FF;
+  border-radius: 100vh;
 }
