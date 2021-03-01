@@ -1281,15 +1281,15 @@ footer p {
 
 .top-page-last h1 {
   font-size: 50px;
-  padding-left: 390px;
+  padding-left: 260px;
   color: black;
 }
 
 .top-page-sign {
   color: black;
   font-size: 40px;
-  padding: 15px 90px;
-  margin-left: 80px;
+  padding: 15px 60px;
+  margin-left: 30px;
   background-color: #00ffff;
   border-radius: 100vh;
   box-shadow: 0 6px #00d8da;
