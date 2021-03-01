@@ -9,9 +9,11 @@
   <div class="grid-day">
     <%= diary.day %>
   </div>
+  <% if current_user.id == diary.user_id %>
   <div class="grid-weight">
     体重<%= diary.weight %>kg
   </div>
+  <% end %>
   <div class="grid-exercise">
   運動
   </div>

@@ -17,7 +17,7 @@
       <div class="field">
         <%= f.label :パスワード %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上の半角英数)</em>
+          <em>(<%= @minimum_password_length %> 文字以上の半角英数両方を含む)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>

@@ -1,73 +1,46 @@
-<h1>ダイエットレベル100</h1>
-<div class="top-wrapper">
-      <div class="container">
-        <h1>レベル100ダイエット</h1>
-        <h1>LEARN TO BE CREATIVE.</h1>
-        <p>続けられるダイエットをはじめませんか？</p>
-        <ul>
-          <li>モチベーションが続かない、、、</li>
-          <li>自己管理が大変、、、</li>
+<div class="top-page-main">
+  <h1>レベル100ダイエット</h1>
+  <br><br>
+  <h2><span>続けられるダイエット</span>をはじめてみませんか？</h2>
+  <br><br><br><br>
+  <h3>「レベル100ダイエット」は続けることに特化したアプリケーションです。</p>
+  <p>レベルによって日に日に痩せていく自分を実感でき、グラフ化によって自分の成長や食事栄養素も簡単に確認できます。</p>
+</div>
 
-        </ul>
-        <p>そんな方でも</p>
-        
-        <p></p>
-        <p>カロリーを減らすことにより老化の原因と言われる活性酸素が減少し、アンチエイジングの効果が見込まれます</p>
-        
-        <p>自分がやり遂げたことで手に入れた自信は、一生無くなりません</p>
-        <p></p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn signup">新規登録はこちら</a>
-          <p>or</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-        </div>
-      </div>
-    </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Learn Where to Get Started!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
-            </div>
-            <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
-            </div>
-            <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
-            </div>
-            <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
-            </div>
-            <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-          <h3>Let's learn to code, learn to be creative!</h3>
-        </div>
-        <span class="btn message">さっそく開発する</span>
-      </div>
-    </div>
+<div class="top-page-level top-page-card">
+  <h1>レベル機能</h1>
+  <p>はじめに体重と目標体重を入力します</p>
+
+  <p>その日の体重を入力すると体重が減った分だけレベルが上がり、レベル100に到達すると目標達成！</p>
+
+  <p>レベルはマイページでグラフ化されたものを確認できるます</p>
+
+</div>
+
+<div class="top-page-nutrient top-page-card">
+  <h1>栄養素機能</h1>
+  <p>糖質、タンパク質、脂質、カロリーを入力するとグラフになって表示されます</p>
+</div>
+
+<div class="top-page-anti-aging top-page-card">
+  <h1>アンチエイジング効果</h1>
+  <p>ダイエットは老化対策にも非常に効果的です</p>
+  <p>腹八分目など、一食の摂取カロリーを抑えることで、細胞の死滅を防ぐ機能が強化されることが科学的にわかっています</p>
+  <p>また、プチ断食も効果的で食事を16時間取らないでいると、古くなった体の中の細胞が分解され新しい細胞に生まれ変わらすことができます。</p>
+  <p>余裕があればぜひ挑戦してみてください！</p>
+</div>
+
+<div class="top-page-comment top-page-card">
+  <h1>コメント機能</h1>
+  <p>詳細からコメントで励まし合うこともできます。</p>
+  <p>また、体重は自分の体重は自分しか見れないので安心です。</p>
+</div>
+
+<div class="top-page-last">
+  <p>自分がやり遂げたことで手に入れた自信は、一生無くなりません</p>
+  <h1>始める</h1>
+  <br><br>
+  <%= link_to "新規登録", new_user_registration_path, class: "top-page-sign" %>
+  <%= link_to "ログイン", new_user_session_path, class: "top-page-sign" %>
+  <br><br><br>
+</div>
