@@ -1138,12 +1138,14 @@ footer p {
   grid-area: d;
   font-size: 20px;
   padding: 2px;
+  color: #000;
   background-color: #57c3e9;
   border-radius: 10px 0px 0px 10px;
 }
 
 .grid-exercise-text {
   grid-area: e;
+  color: #000;
   background-color: #57c3e9;
   border-radius: 0px 10px 10px 0px;
 }
@@ -1152,12 +1154,14 @@ footer p {
   grid-area: f;
   font-size: 16px;
   padding: 2px;
+  color: #000;
   background-color: #57c3e9;
   border-radius: 10px 0px 0px 10px;
 }
 
 .grid-comment-text {
   grid-area: g;
+  color: #000;
   background-color: #57c3e9;
   border-radius: 0px 10px 10px 0px;
 }
@@ -1183,7 +1187,7 @@ footer p {
   margin: 1px;
   padding: 7px 55px;
   font-size: 16px;
-  color: #00FFFF;
+  color: #fff;
   background-color: #0000BB;
   font-weight: bold;
   text-align: center;
@@ -1192,7 +1196,7 @@ footer p {
 }
 
 .switch:hover {
-  color: #00FFFF;
+  color: #FFF;
   background-color: #0000FF;
   border-radius: 100vh;
 }

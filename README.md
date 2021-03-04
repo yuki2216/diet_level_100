@@ -46,19 +46,19 @@ https://level-100-diet.herokuapp.com/
 ### バックエンド
 Ruby, Ruby on Rails
 ### フロントエンド
-javaScript,
+javaScript,preview.js
 ### データベース
 MySQL
 ### インフラ
-AWS(EC3)
-### webサーバー
-
+aws s3
+### 本番環境
+heroku
 ### ソース管理
-
+GitHub, GitHubDesktop
 ### テスト
-
+RSpec
 ### エディタ
-
+VScode
 # 課題や今後実装したい機能
 - 管理者権限
 トレーナーが顧客情報を管理できるように管理者権限を付与しようと考えています。
