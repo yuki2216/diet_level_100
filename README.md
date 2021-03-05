@@ -27,17 +27,17 @@ https://level-100-diet.herokuapp.com/
 アプリケーション紹介ページです。
 ログインする前はこのページへ遷移します。
 ### 投稿一覧
-![toppage](https://user-images.githubusercontent.com/76457647/109829620-0d423400-7c81-11eb-9afd-3e1aba9c95a2.jpeg)
+![一覧](https://user-images.githubusercontent.com/76457647/110064732-0ca8bb00-7db1-11eb-98d2-8f4013ff5203.jpeg)
 皆が投稿した記録をみることができます。
 詳細からコメント可能です。
 ### 詳細表示画面
-![shousai](https://user-images.githubusercontent.com/76457647/109831909-35cb2d80-7c83-11eb-8b67-9c67a3ac0469.jpeg)
+![詳細](https://user-images.githubusercontent.com/76457647/110064726-0adef780-7db1-11eb-893d-8461579a383f.jpeg)
 栄養素のグラフやコメントを見ることができます。
 ### 投稿画面
 ![toukou](https://user-images.githubusercontent.com/76457647/109831955-4380b300-7c83-11eb-8a97-fdbfaee68917.jpeg)
 日付、画像、運動記録などを記入します。
-### マイページ
-![mypage](https://user-images.githubusercontent.com/76457647/109829740-2a770280-7c81-11eb-90c6-570c21c5c4f0.jpeg)
+### マイページのレベル観覧
+![level](https://user-images.githubusercontent.com/76457647/110064724-087c9d80-7db1-11eb-90a7-d1fdf0d2e078.jpeg)
 自分の成長記録を見ることができます。
 # 工夫したポイント
 - レベル機能によって小さな成功体験を積み重ねることができるように工夫しました。
